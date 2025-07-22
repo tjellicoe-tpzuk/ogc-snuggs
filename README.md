@@ -56,7 +56,8 @@ docker build . -t snuggs
 
 ### Execution
 
-We provide two example sets of parameters you may wish to use when testing this application package: `params.yml` and `more-params.yml`. The first of which is simpler and only requires you to specify the BANDS you are concerned with inside your s_expression(s) inputs. The band names are extracted from the input expression and searched for within the assets of the provide STAC items. If instead your BANDS are provided inside assets of a different name you can specify this as an additional input to the workflow: `assets`. The STAC items need to include assets that are readable using gdal in python, `ds = gdal.Open(<asset-reference>)`, with the bands then accessible by the `GetRasterBand(<band-index>)` function.
+We provide two example sets of parameters you may wish to use when testing this application package: `params.yml` and `more-params.yml`. The first of which is simpler and only requires you to specify the BANDS you are concerned with inside your s_expression(s) inputs. The band names are extracted from the input expression and searched for within the assets of the provide STAC items. If instead your BANDS are provided inside assets of a different name you can specify this as an additional input to the workflow: `assets`. 
+The STAC items need to include assets that are readable using gdal in python, `ds = gdal.Open(<asset-reference>)`, with the bands then accessible by the `GetRasterBand(<band-index>)` function.
 
 ```console
 cwltool --parallel app-package.cwl#s-expression params.yml
