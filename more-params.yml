@@ -1,0 +1,8 @@
+inputs:
+  input_reference:
+    - "https://eodatahub.org.uk/api/catalogue/stac/catalogs/public/catalogs/ceda-stac-catalogue/collections/sentinel2_ard/items/neodc.sentinel_ard.data.sentinel_2.2025.05.12.S2C_20250512_latn590lonw0063_T29VPF_ORB023_20250512170944_utm29n_osgb"
+  s_expression:
+    - "ndwi:(/ (- Green NIR_B8) (+ Green NIR_B8))"
+  assets:
+    - "cog"
+    - "data"
